@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lift Labs AU | Premium Protein & Supplements</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+    color:#111;
+}
+
+header{
+    background:#111;
+    color:white;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.nav{
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:1.8rem;
+    font-weight:800;
+    color:#00e676;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+}
+
+.hero{
+    min-height:90vh;
+    background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+    url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1400&q=80');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    padding:40px;
+}
+
+.hero-content{
+    max-width:800px;
+}
+
+.hero h1{
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.2rem;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 30px;
+    background:#00e676;
+    color:#111;
+    text-decoration:none;
+    font-weight:700;
+    border-radius:8px;
+    margin:10px;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+.section{
+    max-width:1200px;
+    margin:auto;
+    padding:80px 20px;
+}
+
+.section-title{
+    text-align:center;
+    font-size:2.5rem;
+    margin-bottom:50px;
+}
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+.price{
+    color:#00c853;
+    font-weight:700;
+    font-size:1.2rem;
+    margin:15px 0;
+}
+
+.buy-btn{
+    width:100%;
+    border:none;
+    background:#111;
+    color:white;
+    padding:12px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.feature{
+    background:white;
+    padding:30px;
+    border-radius:16px;
+    text-align:center;
+}
+
+.feature h3{
+    margin-bottom:10px;
+}
+
+.newsletter{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:80px 20px;
+}
+
+.newsletter h2{
+    margin-bottom:20px;
+}
+
+.newsletter input{
+    width:320px;
+    max-width:90%;
+    padding:15px;
+    border:none;
+    border-radius:8px;
+    margin:10px;
+}
+
+.newsletter button{
+    padding:15px 25px;
+    background:#00e676;
+    border:none;
+    border-radius:8px;
+    font-weight:700;
+    cursor:pointer;
+}
+
+footer{
+    background:#000;
+    color:#bbb;
+    text-align:center;
+    padding:30px;
+}
+
+.cart{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    background:#00e676;
+    color:#111;
+    padding:15px 20px;
+    border-radius:50px;
+    font-weight:700;
+    box-shadow:0 10px 20px rgba(0,0,0,.2);
+}
+
+@media(max-width:768px){
+    .hero h1{
+        font-size:2.8rem;
+    }
+
+    .nav-links{
+        display:none;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="nav">
+        <div class="logo">LIFT LABS AU</div>
+        <div class="nav-links">
+            <a href="#products">Products</a>
+            <a href="#why">Why Us</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Fuel Every Rep.</h1>
+        <p>
+            Premium Australian protein powders and performance supplements
+            built for athletes, lifters and everyday performers.
+        </p>
+        <a href="#products" class="btn">Shop Now</a>
+        <a href="#why" class="btn">Learn More</a>
+    </div>
+</section>
+
+<section id="products" class="section">
+    <h2 class="section-title">Featured Products</h2>
+
+    <div class="products">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=800&q=80">
+            <div class="card-content">
+                <h3>Whey Protein Isolate</h3>
+                <p>25g protein per serve with incredible taste.</p>
+                <div class="price">$59.95</div>
+                <button class="buy-btn" onclick="addToCart()">Add To Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1579722821273-0f6c1d44362f?auto=format&fit=crop&w=800&q=80">
+            <div class="card-content">
+                <h3>Creatine Monohydrate</h3>
+                <p>Pure micronized creatine for strength and power.</p>
+                <div class="price">$29.95</div>
+                <button class="buy-btn" onclick="addToCart()">Add To Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=800&q=80">
+            <div class="card-content">
+                <h3>Pre Workout</h3>
+                <p>Boost energy, focus and training intensity.</p>
+                <div class="price">$44.95</div>
+                <button class="buy-btn" onclick="addToCart()">Add To Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80">
+            <div class="card-content">
+                <h3>Recovery Blend</h3>
+                <p>Advanced recovery support after hard sessions.</p>
+                <div class="price">$49.95</div>
+                <button class="buy-btn" onclick="addToCart()">Add To Cart</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="why" class="section">
+    <h2 class="section-title">Why Lift Labs AU?</h2>
+
+    <div class="features">
+
+        <div class="feature">
+            <h3>Premium Ingredients</h3>
+            <p>Only quality ingredients selected for performance and recovery.</p>
+        </div>
+
+        <div class="feature">
+            <h3>Science Based</h3>
+            <p>Formulas developed around evidence-based nutrition.</p>
+        </div>
+
+        <div class="feature">
+            <h3>Fast Shipping</h3>
+            <p>Quick Australia-wide delivery directly to your door.</p>
+        </div>
+
+        <div class="feature">
+            <h3>Trusted Quality</h3>
+            <p>Manufactured to high standards with rigorous testing.</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="newsletter" id="contact">
+    <h2>Get 10% Off Your First Order</h2>
+    <p>Join the Lift Labs AU community.</p>
+
+    <br>
+
+    <input type="email" placeholder="Enter your email">
+    <button>Subscribe</button>
+</section>
+
+<footer>
+    <p>© 2026 Lift Labs AU. All Rights Reserved.</p>
+    <p>Premium Protein & Performance Supplements</p>
+</footer>
+
+<div class="cart">
+    Cart: <span id="cartCount">0</span>
+</div>
+
+<script>
+let count = 0;
+
+function addToCart(){
+    count++;
+    document.getElementById("cartCount").innerText = count;
+}
+</script>
+
+</body>
+</html>
